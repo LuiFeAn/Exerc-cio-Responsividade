@@ -1,7 +1,7 @@
 body{
     background-image: url("../images/bg.jpg");
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     user-select: none;
@@ -108,8 +108,8 @@ nav li{
 .action .button-2{
     background-color: #3498DB
 }
-
-@media(max-width:850px){
+/*Break-Point Mobile*/
+@media(max-width:660px){
 
     .main header .menu{
         display: none;
@@ -139,11 +139,54 @@ nav li{
         align-items: center;
         flex-direction: column;
     }
+    .phone-2{
+        margin-left: -140px !important;
+    }
 
-    .container .phone-area{
+}
+
+/*Break-Point Tablet*/
+@media(max-width:1120px){
+
+    header{
+        gap: 10px;
+    }
+    .container{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .container .content-area{
+        text-align: center;
+    }
+    .container .content-area h1{
+        inline-size: auto;
+    }
+    .container .content-area p{
+        inline-size: auto;
+    }
+    .container .action{
         justify-content: center;
         align-items: center;
     }
+    .container .phone-area{
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        display: flex ;
+    }
+    .phone-area img{
+        width: 220px;
+        height: auto;
+        position: relative;
+    }
+    .phone-area .phone-1{
+        z-index: 2;
+    }
+    .phone-area .phone-2{
+        margin:0;
+        z-index:1;
+    }
+    
 
 }
 
